@@ -1,7 +1,6 @@
 <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
 <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.0/aframe/build/aframe-ar.js"></script>
 <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
-<script src="https://rawgit.com/zcanter/aframe-gradient-sky/master/dist/gradientsky.min.js"></script>
 
 <!-- import events.js script -->
 <script src="https://rawgit.com/nicolocarpignoli/nicolocarpignoli.github.io/master/ar-click-events/events.js"></script>
@@ -56,8 +55,8 @@
 
     <a-marker-camera preset='hiro' markerhandler emitevents="true" cursor="rayOrigin: mouse" id="animated-marker">
       <a-entity
-                id="animated-model"></a-entity>
-            </a-entity>
+                id="animated-model"scale="2"></a-entity>
+      </a-entity>
     </a-marker-camera>
     <a-entity camera> </entity>
   </a-scene>
