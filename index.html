@@ -70,11 +70,11 @@
 <script>
   var text= document.querySelector('.text');
   var boxEl = document.querySelector('.test');
-  boxEl.addEventListener('mousedown', function () {
+  boxEl.addEventListener('touchstart', function () {
     text.setAttribute('scale', {x: 2, y: 2, z: 2});
   });
 
-  boxEl.addEventListener('mouseup', function () {
+  boxEl.addEventListener('touchend', function () {
     text.setAttribute('scale', {x: 0, y: 0, z: 0});
   });
 </script>
