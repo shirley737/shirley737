@@ -49,19 +49,23 @@
 
     <a-text value="Out of Stock" color="#D52B1E" position="0.5 0 0.7" scale="1 1 1" rotation="0 15 0"  ></a-text>
     <a-box  class="test" position="1 0.0 0" color="#D52B1E" opacity="1" height="0.5" width="0.5" depth="0.5" rotation="0 15 0" >
-        <!-- <a-animation attribute="material.color" 
+        <a-animation attribute="material.color" 
         from="#ffffff"
         to="#D52B1E"
         dur="1000"
         repeat="indefinite"
         easing="ease-in-out-circ">
-      </a-animation> -->
+      </a-animation>
     </a-box>
 
-    <a-box position="1 0.6 0" id ="test" color="#FF8979" opacity="1" height="0.5" width="0.5" depth="0.5" rotation="0 15 0">
+    <a-box position="1 0.6 0"  color="#FF8979" opacity="1" height="0.5" width="0.5" depth="0.5" rotation="0 15 0">
     </a-box>
 
-    <a-text class="text" value="test" position="-2 -1 1" scale="0 0 0"></a-text>
+    <a-text class="text" value="Pumps" position="2 1.5 0" scale="0 0 0" rotation="0 15 0"></a-text>
+    <a-text class="description" value="Estimated $1320 loss today" position="2 1 0" scale="0 0 0" color="red" rotation="0 15 0"></a-text>
+    <a-box class="box" position="2.5 0.3 0" color="#ffd1e0" opacity="0" height="0.3" width="1" depth="0.1" rotation="0 15 0" >
+      </a-box>
+  
     <a-marker-camera preset='hiro' markerhandler emitevents="true" cursor="rayOrigin: mouse" id="animated-marker">
     <a-cursor></a-cursor>
     </a-marker-camera>
@@ -69,13 +73,31 @@
 
 <script>
   var text= document.querySelector('.text');
+  var description = document.querySelector('.description');
   var boxEl = document.querySelector('.test');
-  boxEl.addEventListener('touchstart', function () {
-    text.setAttribute('scale', {x: 2, y: 2, z: 2});
+  var box = document.querySelector('.box');
+
+  boxEl.addEventListener('mouseenter', function () {
+    text.setAttribute('scale', {x: 1.5, y: 1.5, z: 1.5});
+    description.setAttribute('scale', {x: 1, y: 1, z: 1});
+    box.setAttribute('opacity', 1);
   });
 
-  boxEl.addEventListener('touchend', function () {
+  boxEl.addEventListener('mouseleave', function () {
     text.setAttribute('scale', {x: 0, y: 0, z: 0});
+    description.setAttribute('scale', {x: 0, y: 0, z: 0});
+    box.setAttribute('opacity', 0);
+  });
+
+  box.addEventListener('mouseenter', function () {
+    box.setAttribute('opacity', 1);
+  });
+
+  box.addEventListener('mouseleave', function () {
+    box.setAttribute('opacity', 0);
+  });
+  box.addEventListener('click', function () {
+    window.location.href = 'https://www.google.com';
   });
 </script>
 
