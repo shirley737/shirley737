@@ -50,13 +50,13 @@ import events.js script
 
     <a-text value="Out of Stock" color="#D52B1E" position="0.5 0 0.7" scale="1 1 1" rotation="0 15 0"  ></a-text>
     <a-box  class="test" position="1 0.0 0" color="#D52B1E" opacity="1" height="0.5" width="0.5" depth="0.5" rotation="0 15 0" >
-        <a-animation attribute="material.color" 
+        <!-- <a-animation attribute="material.color" 
         from="#ffffff"
         to="#D52B1E"
         dur="1000"
         repeat="indefinite"
         easing="ease-in-out-circ">
-      </a-animation>
+      </a-animation> -->
     </a-box>
 
     <a-box position="1 0.6 0" id ="test" color="#FF8979" opacity="1" height="0.5" width="0.5" depth="0.5" rotation="0 15 0">
@@ -69,7 +69,7 @@ import events.js script
 
 <script>
   var boxEl = document.querySelector('.test');
-  boxEl.addEventListener('click', function () {
+  boxEl.addEventListener('click touch', function () {
     boxEl.setAttribute('scale', {x: 2, y: 2, z: 2});
   });
 </script>
