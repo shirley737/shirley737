@@ -61,7 +61,7 @@
     <a-box position="1 0.6 0" id ="test" color="#FF8979" opacity="1" height="0.5" width="0.5" depth="0.5" rotation="0 15 0">
     </a-box>
 
-    <a-text class="text" value="test" position="0.5 -1 1" scale="0 0 0"></a-text>
+    <a-text class="text" value="test" position="-2 -1 1" scale="0 0 0"></a-text>
     <a-marker-camera preset='hiro' markerhandler emitevents="true" cursor="rayOrigin: mouse" id="animated-marker">
     <a-cursor></a-cursor>
     </a-marker-camera>
@@ -70,11 +70,11 @@
 <script>
   var text= document.querySelector('.text');
   var boxEl = document.querySelector('.test');
-  boxEl.addEventListener('mouseenter', function () {
+  boxEl.addEventListener('touchstart', function () {
     text.setAttribute('scale', {x: 2, y: 2, z: 2});
   });
 
-  boxEl.addEventListener('mouseleave', function () {
+  boxEl.addEventListener('touchend', function () {
     text.setAttribute('scale', {x: 0, y: 0, z: 0});
   });
 </script>
