@@ -4,7 +4,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
 <body style='margin : 0px; overflow: hidden;'>
-
 </style>
 
   <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
@@ -49,13 +48,13 @@
 
     <a-text value="Out of Stock" color="#D52B1E" position="0.5 0 0.7" scale="1 1 1" rotation="0 15 0"  ></a-text>
     <a-box  class="test" position="1 0.0 0" color="#D52B1E" opacity="1" height="0.5" width="0.5" depth="0.5" rotation="0 15 0" >
-        <a-animation attribute="material.color" 
+        <!-- <a-animation attribute="material.color" 
         from="#ffffff"
         to="#D52B1E"
         dur="1000"
         repeat="indefinite"
         easing="ease-in-out-circ">
-      </a-animation>
+      </a-animation> -->
     </a-box>
 
     <a-box position="1 0.6 0"  color="#FF8979" opacity="1" height="0.5" width="0.5" depth="0.5" rotation="0 15 0">
@@ -67,7 +66,19 @@
     <a-text class="stock" value="Add Stock" position="3 0.2 1" scale="0 0 0" color="white" rotation="0 15 0"></a-text>
       </a-box>
   
-    <a-marker-camera preset='hiro' markerhandler emitevents="true" cursor="rayOrigin: mouse" id="animated-marker">
+      <!-- <a-entity camera look-controls>
+          <a-entity cursor="fuse: false; fuseTimeout: 500"
+                    position="0 0 -1"
+                    geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
+                    material="color: black; shader: flat">
+          </a-entity>
+        </a-entity>
+        
+        <a-entity id="box" cursor-listener geometry="primitive: box" material="color: blue"></a-entity> -->
+
+
+  
+    <a-marker-camera preset='hiro' markerhandler emitevents="true" cursor="fuse:true" id="animated-marker">
     <a-cursor></a-cursor>
     </a-marker-camera>
   </a-scene>
@@ -86,26 +97,39 @@
     box.setAttribute('opacity', 1);
   });
 
-  // boxEl.addEventListener('mouseleave', function () {
-  //   text.setAttribute('scale', {x: 0, y: 0, z: 0});
-  //   description.setAttribute('scale', {x: 0, y: 0, z: 0});
-  //   stock.setAttribute('scale', {x: 0, y: 0, z: 0});
-  //   box.setAttribute('opacity', 0);
-  // });
+  boxEl.addEventListener('mouseleave', function () {
+    text.setAttribute('scale', {x: 0, y: 0, z: 0});
+    description.setAttribute('scale', {x: 0, y: 0, z: 0});
+    stock.setAttribute('scale', {x: 0, y: 0, z: 0});
+    box.setAttribute('opacity', 0);
+  });
 
-  // box.addEventListener('mouseenter', function () {
-  //   box.setAttribute('opacity', 1);
-  //   stock.setAttribute('scale', {x: 1, y: 1, z: 1});
-  // });
+  box.addEventListener('mouseenter', function () {
+    box.setAttribute('opacity', 1);
+    stock.setAttribute('scale', {x: 1, y: 1, z: 1});
+  });
 
-  // box.addEventListener('mouseleave', function () {
-  //   box.setAttribute('opacity', 0);
-  //   stock.setAttribute('scale', {x: 0, y: 0, z: 0});
-  // });
-  // box.addEventListener('click', function () {
-  //   window.location.href = 'https://www.google.com';
-  // });
+  box.addEventListener('mouseleave', function () {
+    box.setAttribute('opacity', 0);
+    stock.setAttribute('scale', {x: 0, y: 0, z: 0});
+  });
+  box.addEventListener('click', function () {
+    window.location.href = 'https://www.google.com';
+  });
 </script>
 
-</body>
+<!-- <script>
+AFRAME.registerComponent('cursor-listener', {
+  init: function () {
+    var lastIndex = -1;
+    var COLORS = ['red', 'green', 'blue'];
+    this.el.addEventListener('click', function (evt) {
+      lastIndex = (lastIndex + 1) % COLORS.length;
+      this.setAttribute('material', 'color', COLORS[lastIndex]);
+      console.log('I was clicked at: ', evt.detail.intersection.point);
+    });
+  }
+}); -->
 
+</script>
+</body>
