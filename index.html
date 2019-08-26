@@ -79,32 +79,32 @@
   var box = document.querySelector('.box');
   var stock = document.querySelector('.stock');
 
-  boxEl.addEventListener('mouseenter', function () {
+  boxEl.addEventListener('click', function () {
     text.setAttribute('scale', {x: 1.5, y: 1.5, z: 1.5});
     description.setAttribute('scale', {x: 1, y: 1, z: 1});
     stock.setAttribute('scale', {x: 1, y: 1, z: 1});
     box.setAttribute('opacity', 1);
   });
 
-  boxEl.addEventListener('mouseleave', function () {
-    text.setAttribute('scale', {x: 0, y: 0, z: 0});
-    description.setAttribute('scale', {x: 0, y: 0, z: 0});
-    stock.setAttribute('scale', {x: 0, y: 0, z: 0});
-    box.setAttribute('opacity', 0);
-  });
+  // boxEl.addEventListener('mouseleave', function () {
+  //   text.setAttribute('scale', {x: 0, y: 0, z: 0});
+  //   description.setAttribute('scale', {x: 0, y: 0, z: 0});
+  //   stock.setAttribute('scale', {x: 0, y: 0, z: 0});
+  //   box.setAttribute('opacity', 0);
+  // });
 
-  box.addEventListener('mouseenter', function () {
-    box.setAttribute('opacity', 1);
-    stock.setAttribute('scale', {x: 1, y: 1, z: 1});
-  });
+  // box.addEventListener('mouseenter', function () {
+  //   box.setAttribute('opacity', 1);
+  //   stock.setAttribute('scale', {x: 1, y: 1, z: 1});
+  // });
 
-  box.addEventListener('mouseleave', function () {
-    box.setAttribute('opacity', 0);
-    stock.setAttribute('scale', {x: 0, y: 0, z: 0});
-  });
-  box.addEventListener('click', function () {
-    window.location.href = 'https://www.google.com';
-  });
+  // box.addEventListener('mouseleave', function () {
+  //   box.setAttribute('opacity', 0);
+  //   stock.setAttribute('scale', {x: 0, y: 0, z: 0});
+  // });
+  // box.addEventListener('click', function () {
+  //   window.location.href = 'https://www.google.com';
+  // });
 </script>
 
 </body>
