@@ -23,45 +23,51 @@
     <a-box position="1.92 2.6 0" color="#D52B1E" opacity="1" height="0.1" width="0.2" depth="0.1" ></a-box>
     <a-text value="High Net Profit" color="#000000" position="2 2.8 0" scale=".5 .5 .5"></a-text>
 
+    //green box
     <a-text value="In Stock" color="#03910a" position="-1.5 0 0.7" scale="1 1 1"  ></a-text>
     <a-box
-    src="https://thumbs.dreamstime.com/t/transparent-plastic-warp-background-texture-73676687.jpg"
-     position="-1 0.0 0" color="#03910a" opacity="1" height="0.5" width="0.5" depth="0.5" rotation="0 15 0" >
+    src="pattern.jpg"
+    id="green1" position="-1 0.0 0" color="#03910a" opacity="1" height="0.5" width="0.5" depth="0.5" rotation="0 15 0" >
     </a-box>
     <a-box 
-    src="https://thumbs.dreamstime.com/t/transparent-plastic-warp-background-texture-73676687.jpg"
-    position="-1 0.6 0" color="#03910a" opacity="1" height="0.5" width="0.5" depth="0.5" rotation="0 15 0">
+    src="pattern.jpg"
+    id="green2" position="-1 0.6 0" color="#03910a" opacity="1" height="0.5" width="0.5" depth="0.5" rotation="0 15 0">
     </a-box>
     <a-box 
-    src="https://thumbs.dreamstime.com/t/transparent-plastic-warp-background-texture-73676687.jpg"
-    position="-1 1.2 0" color="#04cc11" opacity="1" height="0.5" width="0.5" depth="0.5" rotation="0 15 0">
+    src="pattern.jpg"
+    id="green3" position="-1 1.2 0" color="#04cc11" opacity="1" height="0.5" width="0.5" depth="0.5" rotation="0 15 0">
     </a-box>
     <a-box 
-    src="https://thumbs.dreamstime.com/t/transparent-plastic-warp-background-texture-73676687.jpg"
-    position="-1 1.8 0" color="#04cc11" opacity="1" height="0.5" width="0.5" depth="0.5" rotation="0 15 0">
+    src="pattern.jpg"
+    id="green4" position="-1 1.8 0" color="#04cc11" opacity="1" height="0.5" width="0.5" depth="0.5" rotation="0 15 0">
     </a-box>
-    <a-box src="https://thumbs.dreamstime.com/t/transparent-plastic-warp-background-texture-73676687.jpg"
-    position="-1 2.4 0" color="#baff75" opacity="1" height="0.5" width="0.5" depth="0.5" rotation="0 15 0">
+    <a-box src="pattern.jpg"
+    id="green5" position="-1 2.4 0" color="#baff75" opacity="1" height="0.5" width="0.5" depth="0.5" rotation="0 15 0">
     </a-box>
 
+    //yellow box
     <a-text value="Low Stock" color="#cf9400" position="-0.5 0 0.7" scale="1 1 1" rotation="0 15 0"></a-text>
-    <a-box src="https://thumbs.dreamstime.com/t/transparent-plastic-warp-background-texture-73676687.jpg"
-     position="0 0.0 0" color="#cf9400" opacity="1" height="0.5" width="0.5" depth="0.5" rotation="0 15 0" >
+    <a-box src="pattern.jpg"
+    id="yellow1" position="0 0.0 0" color="#cf9400" opacity="1" height="0.5" width="0.5" depth="0.5" rotation="0 15 0" >
     </a-box>
-    <a-box src="https://thumbs.dreamstime.com/t/transparent-plastic-warp-background-texture-73676687.jpg"
-     position="0 0.6 0" color="#cf9400" opacity="1" height="0.5" width="0.5" depth="0.5" rotation="0 15 0">
+    <a-box src="pattern.jpg"
+    id="yellow2" position="0 0.6 0" color="#cf9400" opacity="1" height="0.5" width="0.5" depth="0.5" rotation="0 15 0">
     </a-box>
-    <a-box src="https://thumbs.dreamstime.com/t/transparent-plastic-warp-background-texture-73676687.jpg"
-     position="0 1.2 0" color="#e0c202" opacity="1" height="0.5" width="0.5" depth="0.5" rotation="0 15 0" >
+    <a-box src="pattern.jpg"
+    id="yellow3" position="0 1.2 0" color="#e0c202" opacity="1" height="0.5" width="0.5" depth="0.5" rotation="0 15 0" >
     </a-box>
 
+    //red box 
     <a-text value="Out of Stock" color="#D52B1E" position="0.5 0 0.7" scale="1 1 1" rotation="0 15 0"  ></a-text>
-    <a-box  class="test" src="https://thumbs.dreamstime.com/t/transparent-plastic-warp-background-texture-73676687.jpg"
+    <a-box  class="test" src="pattern.jpg"
     position="1 0.0 0" color="#D52B1E" opacity="1" height="0.5" width="0.5" depth="0.5" rotation="0 15 0" >
     </a-box>
-    <a-box src="https://thumbs.dreamstime.com/t/transparent-plastic-warp-background-texture-73676687.jpg"
+    <a-box src="pattern.jpg"
     position="1 0.6 0"  color="#FF8979" opacity="1" height="0.5" width="0.5" depth="0.5" rotation="0 15 0">
     </a-box>
+
+
+    //textbox
     <a-text class="text" value="Pumps" position="2 1.5 0" scale="0 0 0" rotation="0 15 0"></a-text>
     <a-text class="description" value="Estimated $1320 loss today" position="2 1 0" scale="0 0 0" color="red" rotation="0 15 0"></a-text>
     <a-box class="box" position="3 0.3 0" color="#128a24" opacity="0" height="0.3" width="1" depth="0.1" rotation="0 15 0" >
@@ -71,7 +77,9 @@
     <a-marker-camera preset='hiro' markerhandler emitevents="true" cursor="rayOrigin: mouse;fuse: true;fuseTimeout:200" id="animated-marker">
     <a-cursor></a-cursor>
     </a-marker-camera>
-  </a-scene>
+</a-scene>
+
+
 
 <script>
   var text= document.querySelector('.text');
