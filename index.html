@@ -63,10 +63,9 @@
     <a-text class="text" value="Pumps" position="2 1.5 0" scale="0 0 0" rotation="0 15 0"></a-text>
     <a-text class="description" value="Estimated $1320 loss today" position="2 1 0" scale="0 0 0" color="red" rotation="0 15 0"></a-text>
     <a-box class="box" position="3 0.3 0" color="#128a24" opacity="0" height="0.3" width="1" depth="0.1" rotation="0 15 0" >
-    <a-text class="stock" value="Add Stock" position="3 0.2 1" scale="0 0 0" color="white" rotation="0 15 0"></a-text>
       </a-box>
   
-    <a-marker-camera preset='hiro' markerhandler emitevents="true" cursor="rayOrigin: mouse;fuse: true" id="animated-marker">
+    <a-marker-camera preset='hiro' markerhandler emitevents="true" cursor="rayOrigin: mouse;fuse: true;fuseTimeout:200" id="animated-marker">
     <a-cursor></a-cursor>
     </a-marker-camera>
   </a-scene>
@@ -76,7 +75,6 @@
   var description = document.querySelector('.description');
   var boxEl = document.querySelector('.test');
   var box = document.querySelector('.box');
-  var stock = document.querySelector('.stock');
 
   boxEl.addEventListener('mouseenter', function () {
     text.setAttribute('scale', {x: 1.5, y: 1.5, z: 1.5});
@@ -93,16 +91,8 @@
   });
 
   box.addEventListener('mouseenter', function () {
-    box.setAttribute('opacity', 1);
-    stock.setAttribute('scale', {x: 1, y: 1, z: 1});
-  });
-
-  box.addEventListener('mouseleave', function () {
-    box.setAttribute('opacity', 0);
-    stock.setAttribute('scale', {x: 0, y: 0, z: 0});
-  });
-  box.addEventListener('click', function () {
     window.location.href = 'https://www.google.com';
   });
+
 </script>
 </body>
