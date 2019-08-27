@@ -59,8 +59,8 @@
 
     //red box 
     <a-text value="Out of Stock" color="#D52B1E" position="0.5 0 0.7" scale="1 1 1" rotation="0 15 0"  ></a-text>
-    <a-box  class="test" src="pattern.jpg"
-    position="1 0.0 0" color="#D52B1E" opacity="1" height="0.5" width="0.5" depth="0.5" rotation="0 15 0" >
+    <a-box  class="test" src="pattern.jpg" id="red1"
+    position="1 0.0 0" color="#D52B1E" opacity="1" height="0.5" width="0.5" depth="0.5" rotation="0 15 0" id="red2">
     </a-box>
     <a-box src="pattern.jpg"
     position="1 0.6 0"  color="#FF8979" opacity="1" height="0.5" width="0.5" depth="0.5" rotation="0 15 0">
@@ -68,10 +68,8 @@
 
 
     //textbox
-    <a-text class="text" value="Pumps" position="2 1.5 0" scale="0 0 0" rotation="0 15 0"></a-text>
-    <a-text class="description" value="Estimated $1320 loss today" position="2 1 0" scale="0 0 0" color="red" rotation="0 15 0"></a-text>
-    <a-box class="box" position="3 0.3 0" color="#128a24" opacity="0" height="0.3" width="1" depth="0.1" rotation="0 15 0" >
-    </a-box>
+    <a-text class="text" value="" position="-1 -1.5 -0.5" scale="0 0 0" rotation="0 15 0"></a-text>
+    <a-text class="description" value="" position="-1 -2 -0.5" scale="0 0 0" color="red" rotation="0 15 0"></a-text>
   </a-entity>
 
     <a-marker-camera preset='hiro' markerhandler emitevents="true" cursor="rayOrigin: mouse;fuse: true;fuseTimeout:200" id="animated-marker">
@@ -82,22 +80,157 @@
 
 
 <script>
+  var box1 = document.querySelector ("#green1");
+  var box2 = document.querySelector ("#green2");
+  var box3 = document.querySelector ("#green3");
+  var box4 = document.querySelector ("#green4");
+  var box5 = document.querySelector ("#green5");
+  var box6 = document.querySelector ("#yellow1");
+  var box7 = document.querySelector ("#yellow2");
+  var box8 = document.querySelector ("#yellow3");
+  var box9 = document.querySelector ("#red1");
+  var box10 = document.querySelector("#red2");
+
   var text= document.querySelector('.text');
   var description = document.querySelector('.description');
-  var boxEl = document.querySelector('.test');
-  var box = document.querySelector('.box');
 
-  boxEl.addEventListener('mouseenter', function () {
+  box1.addEventListener('mouseenter', function () {
+    text.setAttribute('value',"Condensed Milk")
     text.setAttribute('scale', {x: 1.5, y: 1.5, z: 1.5});
+    description.setAttribute('value', "Estimated Out Of Stock in Oct");
     description.setAttribute('scale', {x: 1, y: 1, z: 1});
-    stock.setAttribute('scale', {x: 1, y: 1, z: 1});
     box.setAttribute('opacity', 1);
   });
-
-  boxEl.addEventListener('mouseleave', function () {
+  box1.addEventListener('mouseleave', function () {
     text.setAttribute('scale', {x: 0, y: 0, z: 0});
+    text.setAttribute('value',"")
     description.setAttribute('scale', {x: 0, y: 0, z: 0});
-    stock.setAttribute('scale', {x: 0, y: 0, z: 0});
+    box.setAttribute('opacity', 0);
+  });
+
+  box2.addEventListener('mouseenter', function () {
+    text.setAttribute('value',"Milk")
+    text.setAttribute('scale', {x: 1.5, y: 1.5, z: 1.5});
+    description.setAttribute('value', "Estimated Out Of Stock in Oct");
+    description.setAttribute('scale', {x: 1, y: 1, z: 1});
+    box.setAttribute('opacity', 1);
+  });
+  box2.addEventListener('mouseleave', function () {
+    text.setAttribute('scale', {x: 0, y: 0, z: 0});
+    text.setAttribute('value',"")
+    description.setAttribute('scale', {x: 0, y: 0, z: 0});
+    box.setAttribute('opacity', 0);
+  });
+
+  box3.addEventListener('mouseenter', function () {
+    text.setAttribute('value',"Blender")
+    text.setAttribute('scale', {x: 1.5, y: 1.5, z: 1.5});
+    description.setAttribute('value', "Estimated Out Of Stock in Nov");
+    description.setAttribute('scale', {x: 1, y: 1, z: 1});
+    box.setAttribute('opacity', 1);
+  });
+  box3.addEventListener('mouseleave', function () {
+    text.setAttribute('scale', {x: 0, y: 0, z: 0});
+    text.setAttribute('value',"")
+    description.setAttribute('scale', {x: 0, y: 0, z: 0});
+    box.setAttribute('opacity', 0);
+  });
+
+  box4.addEventListener('mouseenter', function () {
+    text.setAttribute('value',"Vanilla Extract")
+    text.setAttribute('scale', {x: 1.5, y: 1.5, z: 1.5});
+    description.setAttribute('value', "Estimated Out Of Stock in Nov");
+    description.setAttribute('scale', {x: 1, y: 1, z: 1});
+    box.setAttribute('opacity', 1);
+  });
+  box4.addEventListener('mouseleave', function () {
+    text.setAttribute('scale', {x: 0, y: 0, z: 0});
+    text.setAttribute('value',"")
+    description.setAttribute('scale', {x: 0, y: 0, z: 0});
+    box.setAttribute('opacity', 0);
+  });
+
+  box5.addEventListener('mouseenter', function () {
+    text.setAttribute('value',"Paper Cup")
+    text.setAttribute('scale', {x: 1.5, y: 1.5, z: 1.5});
+    description.setAttribute('value', "Estimated Out Of Stock in Nov");
+    description.setAttribute('scale', {x: 1, y: 1, z: 1});
+    box.setAttribute('opacity', 1);
+  });
+  box5.addEventListener('mouseleave', function () {
+    text.setAttribute('scale', {x: 0, y: 0, z: 0});
+    text.setAttribute('value',"")
+    description.setAttribute('scale', {x: 0, y: 0, z: 0});
+    box.setAttribute('opacity', 0);
+  });
+
+  box6.addEventListener('mouseenter', function () {
+    text.setAttribute('value',"Butter")
+    text.setAttribute('scale', {x: 1.5, y: 1.5, z: 1.5});
+    description.setAttribute('value', "Estimated Out Of Stock in 7 Days");
+    description.setAttribute('scale', {x: 1, y: 1, z: 1});
+    box.setAttribute('opacity', 1);
+  });
+  box6.addEventListener('mouseleave', function () {
+    text.setAttribute('scale', {x: 0, y: 0, z: 0});
+    text.setAttribute('value',"")
+    description.setAttribute('scale', {x: 0, y: 0, z: 0});
+    box.setAttribute('opacity', 0);
+  });
+
+  box7.addEventListener('mouseenter', function () {
+    text.setAttribute('value',"Chocolate")
+    text.setAttribute('scale', {x: 1.5, y: 1.5, z: 1.5});
+    description.setAttribute('value', "Estimated Out Of Stock in 4 Days");
+    description.setAttribute('scale', {x: 1, y: 1, z: 1});
+    box.setAttribute('opacity', 1);
+  });
+  box7.addEventListener('mouseleave', function () {
+    text.setAttribute('scale', {x: 0, y: 0, z: 0});
+    text.setAttribute('value',"")
+    description.setAttribute('scale', {x: 0, y: 0, z: 0});
+    box.setAttribute('opacity', 0);
+  });
+
+  box8.addEventListener('mouseenter', function () {
+    text.setAttribute('value',"Strawberry")
+    text.setAttribute('scale', {x: 1.5, y: 1.5, z: 1.5});
+    description.setAttribute('value', "Estimated Out Of Stock in 3 Days");
+    description.setAttribute('scale', {x: 1, y: 1, z: 1});
+    box.setAttribute('opacity', 1);
+  });
+  box8.addEventListener('mouseleave', function () {
+    text.setAttribute('scale', {x: 0, y: 0, z: 0});
+    text.setAttribute('value',"")
+    description.setAttribute('scale', {x: 0, y: 0, z: 0});
+    box.setAttribute('opacity', 0);
+  });
+
+  box9.addEventListener('mouseenter', function () {
+    text.setAttribute('value',"Cream")
+    text.setAttribute('scale', {x: 1.5, y: 1.5, z: 1.5});
+    description.setAttribute('value', "Estimated Lose $2540/Day");
+    description.setAttribute('scale', {x: 1, y: 1, z: 1});
+    box.setAttribute('opacity', 1);
+  });
+  box9.addEventListener('mouseleave', function () {
+    text.setAttribute('scale', {x: 0, y: 0, z: 0});
+    text.setAttribute('value',"")
+    description.setAttribute('scale', {x: 0, y: 0, z: 0});
+    box.setAttribute('opacity', 0);
+  });
+
+  box10.addEventListener('mouseenter', function () {
+    text.setAttribute('value',"Cookie")
+    text.setAttribute('scale', {x: 1.5, y: 1.5, z: 1.5});
+    description.setAttribute('value', "Estimated Lose $25.4/Day");
+    description.setAttribute('scale', {x: 1, y: 1, z: 1});
+    box.setAttribute('opacity', 1);
+  });
+  box10.addEventListener('mouseleave', function () {
+    text.setAttribute('scale', {x: 0, y: 0, z: 0});
+    text.setAttribute('value',"")
+    description.setAttribute('scale', {x: 0, y: 0, z: 0});
     box.setAttribute('opacity', 0);
   });
 
