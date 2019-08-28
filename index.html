@@ -89,15 +89,18 @@
   var description = document.querySelector('.description');
 
   box1.addEventListener('mouseenter', function () {
+    box1.setAttribute('color',"#00ccff");
     text.setAttribute('value',"Condensed Milk")
     text.setAttribute('scale', {x: 1.5, y: 1.5, z: 1.5});
     description.setAttribute('value', "Estimated Out Of Stock in Oct");
     description.setAttribute('scale', {x: 1, y: 1, z: 1});
+
   });
   box1.addEventListener('mouseleave', function () {
     text.setAttribute('scale', {x: 0, y: 0, z: 0});
     text.setAttribute('value',"")
     description.setAttribute('scale', {x: 0, y: 0, z: 0});
+    box1.setAttribute('color',"#03910a");
   });
 
   box2.addEventListener('mouseenter', function () {
@@ -105,11 +108,13 @@
     text.setAttribute('scale', {x: 1.5, y: 1.5, z: 1.5});
     description.setAttribute('value', "Estimated Out Of Stock in Oct");
     description.setAttribute('scale', {x: 1, y: 1, z: 1});
+    box2.setAttribute('color',"#00ccff");
   });
   box2.addEventListener('mouseleave', function () {
     text.setAttribute('scale', {x: 0, y: 0, z: 0});
     text.setAttribute('value',"")
     description.setAttribute('scale', {x: 0, y: 0, z: 0});
+    box2.setAttribute('color',"#03910a");
   });
 
   box3.addEventListener('mouseenter', function () {
@@ -117,14 +122,17 @@
     text.setAttribute('scale', {x: 1.5, y: 1.5, z: 1.5});
     description.setAttribute('value', "Estimated Out Of Stock in Nov");
     description.setAttribute('scale', {x: 1, y: 1, z: 1});
+    box3.setAttribute('color',"#00ccff");
   });
   box3.addEventListener('mouseleave', function () {
     text.setAttribute('scale', {x: 0, y: 0, z: 0});
     text.setAttribute('value',"")
     description.setAttribute('scale', {x: 0, y: 0, z: 0});
+    box3.setAttribute('color',"#04cc11");
   });
 
   box4.addEventListener('mouseenter', function () {
+    box4.setAttribute('color',"#00ccff");
     text.setAttribute('value',"Vanilla Extract")
     text.setAttribute('scale', {x: 1.5, y: 1.5, z: 1.5});
     description.setAttribute('value', "Estimated Out Of Stock in Nov");
@@ -134,9 +142,11 @@
     text.setAttribute('scale', {x: 0, y: 0, z: 0});
     text.setAttribute('value',"")
     description.setAttribute('scale', {x: 0, y: 0, z: 0});
+    box4.setAttribute('color',"#04cc11");
   });
 
   box5.addEventListener('mouseenter', function () {
+    box5.setAttribute('color',"#00ccff");
     text.setAttribute('value',"Paper Cup")
     text.setAttribute('scale', {x: 1.5, y: 1.5, z: 1.5});
     description.setAttribute('value', "Estimated Out Of Stock in Nov");
@@ -146,9 +156,11 @@
     text.setAttribute('scale', {x: 0, y: 0, z: 0});
     text.setAttribute('value',"")
     description.setAttribute('scale', {x: 0, y: 0, z: 0});
+    box5.setAttribute('color',"#baff75");
   });
 
   box6.addEventListener('mouseenter', function () {
+    box6.setAttribute('color',"#00ccff");
     text.setAttribute('value',"Butter")
     text.setAttribute('scale', {x: 1.5, y: 1.5, z: 1.5});
     description.setAttribute('value', "Estimated Out Of Stock in 7 Days");
@@ -158,9 +170,11 @@
     text.setAttribute('scale', {x: 0, y: 0, z: 0});
     text.setAttribute('value',"")
     description.setAttribute('scale', {x: 0, y: 0, z: 0});
+    box6.setAttribute('color',"#cf9400");
   });
 
   box7.addEventListener('mouseenter', function () {
+    box7.setAttribute('color',"#00ccff");
     text.setAttribute('value',"Chocolate")
     text.setAttribute('scale', {x: 1.5, y: 1.5, z: 1.5});
     description.setAttribute('value', "Estimated Out Of Stock in 4 Days");
@@ -170,9 +184,11 @@
     text.setAttribute('scale', {x: 0, y: 0, z: 0});
     text.setAttribute('value',"")
     description.setAttribute('scale', {x: 0, y: 0, z: 0});
+    box7.setAttribute('color',"#cf9400");
   });
 
   box8.addEventListener('mouseenter', function () {
+    box8.setAttribute('color',"#00ccff");
     text.setAttribute('value',"Strawberry")
     text.setAttribute('scale', {x: 1.5, y: 1.5, z: 1.5});
     description.setAttribute('value', "Estimated Out Of Stock in 3 Days");
@@ -182,27 +198,32 @@
     text.setAttribute('scale', {x: 0, y: 0, z: 0});
     text.setAttribute('value',"")
     description.setAttribute('scale', {x: 0, y: 0, z: 0});
+    box8.setAttribute('color',"#e0c202");
   });
 
   box9.addEventListener('mouseenter', function () {
+    box9.setAttribute('color',"#00ccff");
     text.setAttribute('value',"Cream")
     text.setAttribute('scale', {x: 1.5, y: 1.5, z: 1.5});
     description.setAttribute('value', "Estimated Lose $2540/Day");
     description.setAttribute('scale', {x: 1, y: 1, z: 1});
   });
   box9.addEventListener('mouseleave', function () {
+    box8.setAttribute('color',"#D52B1E");
     text.setAttribute('scale', {x: 0, y: 0, z: 0});
     text.setAttribute('value',"")
     description.setAttribute('scale', {x: 0, y: 0, z: 0});
   });
 
   box10.addEventListener('mouseenter', function () {
+    box10.setAttribute('color',"#00ccff");
     text.setAttribute('value',"Cookie")
     text.setAttribute('scale', {x: 1.5, y: 1.5, z: 1.5});
     description.setAttribute('value', "Estimated Lose $25.4/Day");
     description.setAttribute('scale', {x: 1, y: 1, z: 1});
   });
   box10.addEventListener('mouseleave', function () {
+    box8.setAttribute('color',"#FF8979");
     text.setAttribute('scale', {x: 0, y: 0, z: 0});
     text.setAttribute('value',"")
     description.setAttribute('scale', {x: 0, y: 0, z: 0});
