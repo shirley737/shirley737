@@ -66,7 +66,9 @@
 
     <a-text class="text" value="" font ="https://cdn.aframe.io/fonts/Aileron-Semibold.fnt" position="-1 -1.3 0.7" scale="0 0 0"></a-text>
     <a-text class="description" font =	"https://cdn.aframe.io/fonts/Exo2Bold.fnt" value="" position="-1 -1.8 0.7" scale="0 0 0" color="red"></a-text>
+    <a-text class="link" font =	"https://cdn.aframe.io/fonts/Exo2Bold.fnt" value="" material="color: #eee" position="-1 -2.3 0.7" scale="0 0 0" color="red"></a-text>
   </a-entity>
+
 
     <a-marker-camera preset='hiro' markerhandler emitevents="true" cursor="rayOrigin:mouse;fuse: true;fuseTimeout:200" id="animated-marker">
     <a-cursor></a-cursor>
@@ -87,6 +89,7 @@
 
   var text= document.querySelector('.text');
   var description = document.querySelector('.description');
+  var link = document.querySelector('.link');
 
   box1.addEventListener('mouseenter', function () {
     box1.setAttribute('color',"#00ccff");
@@ -207,12 +210,15 @@
     text.setAttribute('scale', {x: 1.5, y: 1.5, z: 1.5});
     description.setAttribute('value', "Estimated Lose $2540/Day. Click here to add stock");
     description.setAttribute('scale', {x: 1, y: 1, z: 1});
+    link.setAttribute('value', "Click here to add stock");
+    link.setAttribute('scale', {x: 1, y: 1, z: 1});
   });
   box9.addEventListener('mouseleave', function () {
     box9.setAttribute('color',"#D52B1E")
     text.setAttribute('scale', {x: 0, y: 0, z: 0});
     text.setAttribute('value',"")
     description.setAttribute('scale', {x: 0, y: 0, z: 0});
+    link.setAttribute('scale', {x: 0, y: 0, z: 0});
   });
 
   box10.addEventListener('mouseenter', function () {
